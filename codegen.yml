@@ -1,0 +1,18 @@
+schema:
+  - "https://api-sa-east-1.hygraph.com/v2/cl4oph2hn0peq01z4af3zhr2p/master":
+      headers:
+        Authorization: "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImdjbXMtbWFpbi1wcm9kdWN0aW9uIn0.eyJ2ZXJzaW9uIjozLCJpYXQiOjE2NTg5NjU1NTcsImF1ZCI6WyJodHRwczovL2FwaS1zYS1lYXN0LTEuaHlncmFwaC5jb20vdjIvY2w0b3BoMmhuMHBlcTAxejRhZjN6aHIycC9tYXN0ZXIiLCJtYW5hZ2VtZW50LW5leHQuZ3JhcGhjbXMuY29tIl0sImlzcyI6Imh0dHBzOi8vbWFuYWdlbWVudC5ncmFwaGNtcy5jb20vIiwic3ViIjoiZmE1YmZkYWItODNiYy00OTRiLTkzM2YtMmZiNDUyMjI4NTQzIiwianRpIjoiY2w2NDk5Y24zN2w1ODAxdWtiZGRqZXVwaiJ9.M6-K6-wMUi3R3Fxs3sKjZoPXJevG0HckEuvJrDCNGo1Cliclj-ZHic1UGLIF38OhcMz-LsqzpE36hu5qV4brNyUyJhR7HTcJGeqqOasHgG8HQjHYFUrv4fsndAFDpvF7RYrGDAJcNpr6X-qAoxlDbdFZOpqhduA2rCp7u5E7-vL-IzURk3rRQZrx_M3caUNEpPxr6kVCFgb0JKGvSluizwNXOu5ATa7xR1JpA73Hn1BPKRwr1hE09TtHhoSDTrs8cmXQdZ9xjmFTjUCipkfFAw88l2O9evRa1f1mOEYaan-eeuUV_JKD2j4IK7vKj9VFV7TDkWjCQFMOmFVKsZ-o4RMiHKtY8okUPgOdavFpj2rTkLrAsJcYLXpRE46CUwbourB1-6ts2G6cEPIn_QUWq6dZH5dMvma78JvO4ThBYj8Yr9iD2wTz794ieZU-X_NtwJkYi7tc73fp6rVOn4h6722em_1vSxzSs96s57casoREH6hFPiHDE_yYQVGdXh8XlYIKU6P8LxFEn4fEz7y7X3lJEnglkZN2sQN5UUm3cE2wa8ZYRocyQztFv_iie1_JHYoQedhsyVzl1FHKRXMd74qT4MA2Rb9K_I8-zrkmfRqmO-FuqfX42dNz1O3zDiq9R-sFm0jAoqUVkIQP_oKmB7rOHCh7uBbNsyEBVsrwOz8"
+
+documents: "./src/graphql/**/*.graphql"
+
+generates:
+  ./src/graphql/generated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      reactApolloVersion: 3
+      withHooks: true
+      withHOC: false
+      withComponent: false
